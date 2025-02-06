@@ -16,7 +16,7 @@ app.use(cors())
 readdirSync('./routes').map((route) => app.use('/api/v1', require('./routes/' + route)))
 
 
-const server = () => {
+const served = () => {
     db()
     app.listen(PORT, () => {
         console.log('listening to port:', PORT)
